@@ -82,7 +82,7 @@ class Result(Base):
 Topic.quizzes = relationship("Quiz", back_populates="topic")
 
 # Create the database engine (SQLite in this case)
-DATABASE_URL = "sqlite:///example.db"  # You can change this to your DB URL (PostgreSQL, MySQL, etc.)
+DATABASE_URL = "sqlite:///MySQL.db"  # You can change this to your DB URL (PostgreSQL, MySQL, etc.)
 engine = create_engine(DATABASE_URL, echo=True)
 
 # Create all tables in the database (students, topics, quizzes, results tables)
@@ -96,7 +96,7 @@ session = Session()
 new_student = Student(
     first_name='John',
     last_name='Doe',
-    email='john.doe@example.com',
+    email='john.doe@student.com',
     password='securepassword123'  # In real applications, hash this password!
 )
 
